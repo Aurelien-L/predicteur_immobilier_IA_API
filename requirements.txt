@@ -1,0 +1,10 @@
+pandas
+scikit-learn
+matplotlib
+joblib
+requests
+fastapi
+uvicorn
+python-dotenv
+pytest
+httpx
