@@ -8,3 +8,7 @@ MODELES = {
     "appartement": pipeline_apparts["Arbre de Décision"]["pipeline"],
     "maison": pipeline_maisons["Forêt Aléatoire"]["pipeline"]
 }
+
+
+# Exemple de récupération de score pour un modèle
+# print(pipeline_maisons["Arbre de Décision"]["RMSE"])
