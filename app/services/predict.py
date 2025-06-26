@@ -1,6 +1,7 @@
-from app.model_loader import MODELES
-from app.schemas import InputFeatures
+from app.models.model_loader import MODELES
+from app.schemas.features import InputFeatures
 import pandas as pd
+
 
 # Mapping des noms API → noms utilisés dans les pipelines
 COLUMN_MAPPING = {
@@ -14,16 +15,16 @@ COLUMN_MAPPING = {
 # Colonnes attendues par chaque modèle
 COLONNES_ATTENDUES = {
     "maison": [
-        "Surface reelle bati", "Nombre pieces principales",
-        "Surface terrain", "Nombre de lots"
+        "Surface reelle bati", "Nombre de lots",
+        "Surface terrain", "Nombre pieces principales"
     ],
     "appartement": [
-        "Surface reelle bati", "Nombre pieces principales",
-        "Nombre de lots"
+        "Surface reelle bati",
+        "Nombre de lots", "Nombre pieces principales"
     ]
 }
 
-def predict_price(data: InputFeatures):
+async def predict_price(data: InputFeatures):
     model_type = "maison" if data.type_local.lower() == "maison" else "appartement"
     pipeline = MODELES[model_type]
 
