@@ -1,6 +1,15 @@
 import os
 from joblib import load
 
+
+"""
+    Ce script charge les pipeline enregistré avec Joblib, puis
+    crée un dictionnaire définissant quel modèle utiliser pour la
+    prédiction du prix au m² des maisons et des appartements
+    
+"""
+
+
 pipeline_maisons = load("models/modeles_maisons.joblib")
 pipeline_apparts = load("models/modeles_apparts.joblib")
 

@@ -1,6 +1,18 @@
 import pandas as pd
 import os
 
+"""
+    Ce script permet d'extraire proprement les données utiles du fichier brut des valeurs foncières 2022.
+    Il crée deux dataset propres lille_2022.csv et bordeaux_2022.csv pour préparer l'analyse à venir :
+    - chargement du fichier brut
+    - filtrage des lignes (commune = LILLE/BORDEAUX, mutation = Vente, valeur foncière et Surface réelle bâti non nulles)
+    - conversion de colonnes (Valeur fonciere et Surface reelle bati -> float)
+    - calcul du prix au m² pour chaque bien (nouvelle colonne)
+    - export des fichiers nettoyés au format csv dans data/
+
+"""
+
+
 # Chargement
 df = pd.read_csv("data/ValeursFoncieres-2022.txt", sep='|', low_memory=False)
 
