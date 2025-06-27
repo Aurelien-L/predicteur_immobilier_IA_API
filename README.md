@@ -4,7 +4,7 @@
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
 ![FastAPI](https://img.shields.io/badge/FastAPI-API%20REST-cyan?logo=fastapi)
 ![Pydantic](https://img.shields.io/badge/Pydantic-v2-blueviolet?logo=pydantic)
-![Tests](https://img.shields.io/badge/tests-pytest%20%7C%20asyncio-ff69b4?logo=pytest)
+![Tests](https://img.shields.io/badge/Tests-Pytest%20%7C%20Asyncio-ff69b4?logo=pytest)
 
 # IA & Immobilier : Prédicteur de prix au m² avec API FastAPI
 
